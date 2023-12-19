@@ -34,7 +34,7 @@ app.use(cors());
 app.use(express.json());    // enble json (for sending req and response in json)
 app.use(morgan('dev'))
 // app.use(express.static(path.join(__dirname, "./frontend/build")))
-app.use(express.static(path.join(__dirname+ '././frontend/build')))
+app.use(express.static(path.join(__dirname+ '../../frontend/build')))
 
 
 //routes (here we connect the all routes file)
@@ -49,7 +49,7 @@ app.use("/api/v1/product", productRoutes);
 // })
 
 app.use('*', function(req,res){
-         res.sendFile(path.resolve(__dirname , "././frontend/build/index.html"))
+         res.sendFile(path.resolve(__dirname , "../../frontend/build/index.html"))
      })
     
 
